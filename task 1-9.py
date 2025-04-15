@@ -31,3 +31,13 @@ class OnlineSalesRegisterCollector:
         except NameError as e:
             print(e)
 
+    #3 задание 
+    def delete_item_from_check(self, name):
+        try:
+            if name not in self.__name_items:
+                raise NameError(f'Позиция отсутствует в чеке')
+            self.__name_items.remove(name)
+            self.__number_items -= 1
+        except NameError as e:
+            print(e)
+
