@@ -3,7 +3,7 @@ import datetime
 class OnlineSalesRegisterCollector:
 
     def __init__(self):
-        self.__name_items = ['чипсы', 'молоко', 'кола', 'кола','чипсы', 'молоко', 'кола', 'кола','чипсы', 'молоко', 'кола', 'кола']
+        self.__name_items = []
         self.__number_items = 0
         self.__item_price = {'чипсы': 50, 'кола': 100, 'печенье': 45, 'молоко': 55, 'кефир': 70}
         self.__tax_rate = {'чипсы': 20, 'кола': 20, 'печенье': 20, 'молоко': 10, 'кефир': 10}
@@ -58,3 +58,19 @@ class OnlineSalesRegisterCollector:
         if len(self.__name_items) > 10:
             return total_sum * 0.9
         return total_sum
+    
+    #5 задание
+    def twenty_percent_tax_calculation(self):
+        twenty_percent_tax = []
+        total = []
+
+        for item in self.__name_items:
+            if self.__tax_rate[item] == 20:
+                twenty_percent_tax.append(item)
+                total.append(self.__item_price[item])
+
+        total_sum = sum(total)
+        
+        if len(self.__name_items) > 10:
+            return (total_sum * 0.9) * 0.2
+        return total_sum * 0.2
