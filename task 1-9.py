@@ -107,3 +107,14 @@ class OnlineSalesRegisterCollector:
             return f'+7{telephone_number}'
         except ValueError as e:
             print(e)
+    
+    #9 задание
+    @staticmethod
+    def get_date_and_time():
+        now = datetime.datetime.now()
+        date_and_time = []
+        date = ['часы', lambda x: x.hour], ['минуты', lambda x: x.minute], ['день', lambda x: x.day], ['месяц', lambda x: x.month], ['год', lambda x: x.year]
+        for i in date:
+            date_and_time.append(f'{i[0]}: {(i[1])(now)}')
+        return date_and_time
+    
