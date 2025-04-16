@@ -91,3 +91,8 @@ class OnlineSalesRegisterCollector:
             return (total_sum * 0.9) * 0.1
         return total_sum * 0.1
     
+    #7 задание
+    def total_tax(self):
+        total_tax = self.twenty_percent_tax_calculation() + self.ten_percent_tax_calculation()
+        return total_tax
+    
